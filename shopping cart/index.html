@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <title>shopping cart</title>
+    <script src="app.js" defer></script>
+
+</head>
+
+<body>
+    <section id="js--checkoutWindow" class="checkout a-popup">
+        <ul class="checkout_list">
+            <li class="checkout_listitem">
+                <img src="img/buzzlightyear.webp" alt="pandora sieraad van buzz lightyear" class="checkout_img">
+                <p class="checkouts_title">buzz lightyear</p>
+                <p id="js--amount-buzz" class="checkout_amount"></p>
+            </li>
+            <li class="checkout_listitem">
+                <img src="img/ironman.webp" alt="pandora sieraad van iron man" class="checkout_img">
+                <p class="checkouts_title">iron man</p>
+                <p id="js--amount-iron" class="checkout_amount"></p>
+            </li>
+            <li class="checkout_listitem">
+                <img src="img/c3po.webp" alt="pandora sieraad van C3PO" class="checkout_img">
+                <p class="checkouts_title">C3PO</p>
+                <p id="js--amount-c3po" class="checkout_amount"></p>
+            </li>
+        </ul>
+    </section>
+    <article class="modal a-popup" id="js--shoppingModal">
+        &#10003; Added to Cart
+    </article>
+    <button id="js--checkoutbutton" class="shoppinCart">
+        Logo
+        <div class="shoppinCart_message">0</div>
+    </button>
+    <main>
+        <ul class="game">
+            <li class="games_game a-popup">
+                <figure class="games_figure">
+                    <img src="img/buzzlightyear.webp" alt="pandora sieraad van buzz lightyear" class="games_img">
+                </figure>
+                <section class="games_body">
+                    <h2 class="games_h2">€49</h2>
+                    <h3 class="games_h3">Buzz Lightyear - Pixar</h3>
+                    <div class="games_stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <button data-product="buzz" class="games_button">add to cart</button>
+                </section>
+            </li>
+            <li class="games_game a-popup">
+                <figure class="games_figure">
+                    <img src="img/ironman.webp" alt="pandora sieraad van iron man" class="games_img">
+                </figure>
+                <section class="games_body">
+                    <h2 class="games_h2">€39</h2>
+                    <h3 class="games_h3">Iron Man - Pixar</h3>
+                    <div class="games_stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <button data-product="iron" class="games_button">add to cart</button>
+                </section>
+            </li>
+            <li class="games_game a-popup games_game--third">
+                <figure class="games_figure">
+                    <img src="img/c3po.webp" alt="pandora sieraad van C3PO" class="games_img">
+                </figure>
+                <section class="games_body">
+                    <h2 class="games_h2">€49</h2>
+                    <h3 class="games_h3">C3PO - Star Wars</h3>
+                    <div class="games_stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <button data-product="c3po" class="games_button">add to cart</button>
+                </section>
+            </li>
+        </ul>
+    </main>
+
+</body>
+
+</html>
