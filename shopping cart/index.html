@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5476467842.js" crossorigin="anonymous"></script>
     <title>shopping cart</title>
     <script src="app.js" defer></script>
 
@@ -21,16 +22,19 @@
                 <img src="img/buzzlightyear.webp" alt="pandora sieraad van buzz lightyear" class="checkout_img">
                 <p class="checkouts_title">buzz lightyear</p>
                 <p id="js--amount-buzz" class="checkout_amount"></p>
+                <p id="js--amount-buzz-total" class="checkout_amount-total"></p>
             </li>
             <li class="checkout_listitem">
                 <img src="img/ironman.webp" alt="pandora sieraad van iron man" class="checkout_img">
                 <p class="checkouts_title">iron man</p>
-                <p id="js--amount-iron" class="checkout_amount"></p>
+                <p id="js--amount-ironman" class="checkout_amount"></p>
+                <p id="js--amount-ironman-total" class="checkout_amount-total"></p>
             </li>
             <li class="checkout_listitem">
                 <img src="img/c3po.webp" alt="pandora sieraad van C3PO" class="checkout_img">
                 <p class="checkouts_title">C3PO</p>
                 <p id="js--amount-c3po" class="checkout_amount"></p>
+                <p id="js--amount-c3po-total" class="checkout_amount-total"></p>
             </li>
         </ul>
     </section>
@@ -38,7 +42,8 @@
         &#10003; Added to Cart
     </article>
     <button id="js--checkoutbutton" class="shoppinCart">
-        Logo
+        <i id="js--cartIcon" class="fa-solid fa-cart-shopping"></i>
+        <i id="js--arrowIcon" class="fa-solid fa-angles-left"></i>
         <div class="shoppinCart_message">0</div>
     </button>
     <main>

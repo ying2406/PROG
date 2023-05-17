@@ -7,6 +7,7 @@ let buzz = 0;
 let iron = 0;
 let c3po = 0;
 
+
 for(let i = 0; i < addToCartButtons.length; i++){
     addToCartButtons[i].onclick = function(){
         cartMessage += 1;
@@ -34,22 +35,37 @@ for(let i = 0; i < addToCartButtons.length; i++){
             modalIsOpen = false;
         },2000);
     }
+    
 }
-
-const checkOutButton = document.getElementById("js--checkoutbutton");
-const CheckOutWindow = document.getElementById("js--checkoutWindow");
+const checkoutButton = document.getElementById("js--checkoutbutton");
+const checkoutWindow = document.getElementById("js--checkoutWindow");
+const cartIcon = document.getElementById("js--cartIcon");
+const arrowIcon = document.getElementById("js--arrowIcon");
+const totalBuzz = document.getElementById("js--amount-buzz-total");
+const totalIron = document.getElementById("js--amount-ironman-total");
+const totalC3po = document.getElementById("js--amount-c3po-total");
+arrowIcon.style.display = "none";
 let checkoutIsOpen = false;
-checkOutButton.onclick = function(){
-    if(checkoutIsOpen === false){
-    document.querySelector("main").style.display = "none";
-    CheckOutWindow.style.display = "block";
-    checkoutIsOpen = true;
-    document.getElementById("js--amount-buzz").innerHTML = buzz + "x";
-    document.getElementById("js--amount-iron").innerHTML = iron + "x";
-    document.getElementById("js--amount-c3po").innerHTML = c3po + "x";
-    return;
+
+console.log(checkoutButton);
+checkoutButton.onclick = function () { 
+    if (checkoutIsOpen === false) {
+        document.querySelector("main").style.display = "none";
+        checkoutWindow.style.display = "block";
+        document.getElementById("js--amount-buzz").innerHTML = buzz + "x";
+        document.getElementById("js--amount-ironman").innerHTML = iron + "x";
+        document.getElementById("js--amount-c3po").innerHTML = c3po + "x";
+        totalBuzz.innerHTML = "€" + buzz * 49;
+        totalIron.innerHTML = "€" + iron * 39;
+        totalC3po.innerHTML = "€" + c3po * 49;
+        cartIcon.style.display = "none";
+        arrowIcon.style.display = "block";
+        checkoutIsOpen = true;
+        return;
     }
     document.querySelector("main").style.display = "block";
-    CheckOutWindow.style.display = "none";
+    checkoutWindow.style.display = "none";
+    cartIcon.style.display = "block";
+    arrowIcon.style.display = "none";
     checkoutIsOpen = false;
 }
